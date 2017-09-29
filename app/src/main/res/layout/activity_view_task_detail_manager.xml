@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_view_task"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/myContainer"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="20dp"/>
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/ivHousekeeperImage"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/icon_user"
+                        app:civ_border_width="0dp"
+                        android:layout_gravity="center"
+                        app:civ_border_color="#FF000000"/>
+                </RelativeLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tvHouseKeeperName"
+                        />
+                    <TextView
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tvStatusAndTime"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:id="@+id/tvStartTaskMessage"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text=""
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:id="@+id/tvRoomNumber"
+                android:textColor="#000"
+                android:textSize="@dimen/suggestionTextSize"
+                android:text="Room Number"
+                android:padding="10dp"
+                />
+            <View
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:background="#bdbdbd"
+                android:layout_height="2dp"
+
+                ></View>
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/btnCloseTask"
+                android:paddingLeft="20dp"
+                android:visibility="gone"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:text="CLOSE TASK"
+                android:textColor="#fff"
+                android:clickable="true"
+                android:background="@drawable/greenbutton"
+                android:textSize="15sp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:id="@+id/tvFloorNumber"
+                android:textColor="#000"
+                android:textSize="@dimen/suggestionTextSize"
+                android:text="Floor Number"
+                android:padding="10dp"
+                />
+            <View
+                android:layout_width="wrap_content"
+                android:background="#bdbdbd"
+                android:layout_height="2dp"
+
+                ></View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:id="@+id/tvTask"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:text="Task List"
+                android:padding="10dp"
+                />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:padding="10dp"
+                android:id="@+id/rvAllTask"
+                android:background="@drawable/graybackground"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:layout_marginTop="15dp"
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/black_border_background"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="#000"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/suggestionTextSize"
+                    android:text="Write Description Now "
+                    android:padding="10dp"
+                    />
+            <EditText
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/graybackground"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/txtDescription"
+                android:textSize="13sp"
+                android:maxLength="120"
+                android:gravity="top"
+                android:padding="5dp"
+                android:inputType="textMultiLine"
+                />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_gravity="center"
+                    android:id="@+id/tvInspectionText"
+                    android:textColor="#000"
+                    android:textSize="@dimen/suggestionTextSize"
+                    android:text="Write Your Inspection When All Task Closed"
+                    android:padding="10dp"
+                    />
+            <EditText
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/graybackground"
+                android:textSize="13sp"
+                android:hint="Write Inspection Comment"
+                android:id="@+id/txtInspection"
+                android:gravity="top"
+                android:padding="5dp"
+                android:inputType="textMultiLine"
+                />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:id="@+id/tvRatingText"
+                    android:textColor="#000"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/suggestionTextSize"
+                    android:text="Give Rating To Housekeeper When Task Closed"
+                    android:padding="10dp"
+                    />
+              <RatingBar
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:numStars="5"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginRight="20dp"
+                  android:id="@+id/ratingBar"
+                  android:layout_marginBottom="10dp"
+                  />
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="#000"
+                    android:id="@+id/tvAverageRating"
+                    android:textSize="@dimen/suggestionTextSize"
+                    android:text=""
+                    android:padding="10dp"
+                    />
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:text="SAVE "
+                android:textColor="#fff"
+                android:clickable="true"
+                android:background="@drawable/greenbutton"
+                android:textSize="18sp"
+
+                />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <ImageView
+        android:id="@+id/ivMessage"
+        android:layout_width="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/icon_message"
+        android:layout_margin="@dimen/fab_margin"
+        />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        android:visibility="invisible"
+        style="@style/SpinKitView.Large.DoubleBounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:SpinKit_Color="#e19227"
+
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_addand_edit_house_keeper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.housekeepingmanagingapp.activity.AddandEditHouseKeeperActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:paddingBottom="20dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/myContainer"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="80dp"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="20dp"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/ivUserImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/icon_user"
+                app:civ_border_width="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                app:civ_border_color="#FF000000"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click On Image To Select Profile Picture"
+            android:id="@+id/tvPictureText"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            />
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:id="@+id/txtFullName"
+            android:hint="Full Name"
+            android:textColor="#bdbdbd"
+            android:textColorHint="#bdbdbd"
+            android:textSize="15sp"
+            android:inputType="textPersonName"
+            android:ems="15"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:theme="@style/MyEditTextTheme"
+
+            />
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:id="@+id/txtEmail"
+            android:hint="Email"
+            android:textColor="#bdbdbd"
+            android:textColorHint="#bdbdbd"
+            android:textSize="15sp"
+            android:inputType="textEmailAddress"
+            android:ems="15"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:theme="@style/MyEditTextTheme"
+
+            />
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:id="@+id/txtPassword"
+            android:hint="Password"
+            android:textColor="#bdbdbd"
+            android:textColorHint="#bdbdbd"
+            android:textSize="15sp"
+            android:inputType="textPassword"
+            android:ems="15"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:theme="@style/MyEditTextTheme"
+            />
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:digits="0123456789+"
+            android:id="@+id/txtContactNumber"
+            android:hint="Contact Number 111-222-3333"
+            android:textColor="#bdbdbd"
+            android:textColorHint="#bdbdbd"
+            android:textSize="15sp"
+            android:inputType="phone"
+            android:ems="15"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:theme="@style/MyEditTextTheme"
+
+            />
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/btnSave"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:text="Save"
+            android:textColor="#fff"
+            android:clickable="true"
+            android:background="@drawable/greenbutton"
+            android:textSize="18sp"
+
+            />
+        <RelativeLayout
+            android:paddingBottom="20dp"
+            android:id="@+id/rlEditAndDelete"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="100dp">
+
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/btnEdit"
+                android:layout_width="140dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:text="Edit"
+                android:textColor="#fff"
+                android:clickable="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/greenbutton"
+                android:textSize="18sp"
+
+                />
+
+
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/btnDelete"
+                android:layout_width="140dp"
+                android:layout_alignParentRight="true"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:text="Delete"
+                android:textColor="#fff"
+                android:clickable="true"
+                android:background="@drawable/greenbutton"
+                android:textSize="18sp"
+
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    </ScrollView>
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        android:visibility="invisible"
+        style="@style/SpinKitView.Large.DoubleBounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:SpinKit_Color="#e19227"
+
+        />
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rvAllMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:demo_child_count="5"
+        android:layout_marginBottom="40dp"
+        app:demo_layout="@layout/layout_demo"
+        app:demo_layout_manager_type="linear_vertical"
+        />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        android:visibility="invisible"
+        style="@style/SpinKitView.Large.DoubleBounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:SpinKit_Color="#e19227"
+
+        />
+    <ImageView
+        android:id="@+id/ivNewMessages"
+        android:layout_width="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/icon_message"
+        android:layout_margin="@dimen/fab_margin"
+        />
+    <ImageView
+        android:id="@+id/ivError"
+        android:visibility="gone"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/icon_error"
+        android:layout_margin="@dimen/fab_margin"
+        />
+</RelativeLayout>

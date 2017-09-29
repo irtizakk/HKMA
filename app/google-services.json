@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "345379987289",
+    "firebase_url": "https://housekeepingmanagingapp.firebaseio.com",
+    "project_id": "housekeepingmanagingapp",
+    "storage_bucket": "housekeepingmanagingapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345379987289:android:25f523e1554a3c3a",
+        "android_client_info": {
+          "package_name": "com.housekeepingmanagingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "345379987289-30i6ae5cheo6ov2rnimuov3d0h39atlg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5m99hRA7U6qocQE3x6UEPrMTO6ELfXnA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

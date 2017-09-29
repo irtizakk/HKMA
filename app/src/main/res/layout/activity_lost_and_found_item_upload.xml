@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_lost_and_found_item_upload"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.housekeepingmanagingapp.activity.LostAndFoundItemUploadActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:id="@+id/tvPreviousImages"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:text="Previously Uploaded Images"
+            android:padding="10dp"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:padding="10dp"
+            android:id="@+id/rvPreviousImages"
+            android:background="@drawable/graybackground"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/taskBoxHeight">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:id="@+id/tvCurrentImages"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:text="New Images To Upload"
+            android:padding="10dp"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:padding="10dp"
+            android:id="@+id/rvCurrentImages"
+            android:background="@drawable/graybackground"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/taskBoxHeight">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/btnSelectImages"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="SELECT IMAGE"
+            android:textColor="#fff"
+            android:clickable="true"
+            android:background="@drawable/greenbutton"
+            android:textSize="15sp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:id="@+id/tvDescriptionText"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:textSize="@dimen/suggestionTextSize"
+            android:text="Add Description"
+            android:padding="10dp"
+            />
+        <EditText
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/graybackground"
+            android:id="@+id/txtDescription"
+            android:gravity="top"
+            android:focusable="false"
+            android:padding="5dp"
+            android:inputType="textMultiLine"
+            />
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/btnUpload"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="UPLOAD"
+            android:textColor="#fff"
+            android:clickable="true"
+            android:background="@drawable/greenbutton"
+            android:textSize="15sp"
+
+            />
+
+    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        android:visibility="invisible"
+        style="@style/SpinKitView.Large.DoubleBounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:SpinKit_Color="#e19227"
+
+        />
+</RelativeLayout>

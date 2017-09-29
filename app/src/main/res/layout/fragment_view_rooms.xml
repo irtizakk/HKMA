@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.housekeepingmanagingapp.fragments.ViewHouseKeepersFragment">
+    <EditText
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:id="@+id/txtSearch"
+        android:hint="Search Rooms By Room No"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textColor="#bdbdbd"
+        android:textColorHint="#bdbdbd"
+        android:textSize="15sp"
+        android:inputType="textPersonName"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:theme="@style/MyEditTextTheme"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/liMain"
+        android:layout_below="@+id/txtSearch"
+        android:layout_width="match_parent"
+        android:background="#4b6ea4"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Room No"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:id="@+id/tvRoom"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Floor No"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:id="@+id/tvHousekeepr"
+            />
+
+    </LinearLayout>
+    <!-- TODO: Update blank fragment layout -->
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/liMain"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rvAllRooms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:demo_child_count="5"
+        android:layout_marginBottom="40dp"
+        app:demo_layout="@layout/layout_demo"
+        app:demo_layout_manager_type="linear_vertical"
+        />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        android:visibility="invisible"
+        style="@style/SpinKitView.Large.DoubleBounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:SpinKit_Color="#e19227"
+
+        />
+    <ImageView
+        android:id="@+id/ivAddRoom"
+        android:layout_width="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/icon_add"
+        android:layout_margin="@dimen/fab_margin"
+        />
+    <ImageView
+        android:id="@+id/ivError"
+        android:visibility="gone"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/icon_error"
+        android:layout_margin="@dimen/fab_margin"
+        />
+</RelativeLayout>

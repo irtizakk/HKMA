@@ -1,0 +1,8 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="sliderHeight">200dp</dimen>
+    <dimen name="fabIconWidthAndHeight">80dp</dimen>
+    <dimen name="suggestionTextSize">15sp</dimen>
+
+    <dimen name="taskBoxHeight">220dp</dimen>
+</resources>
